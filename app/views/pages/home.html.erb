@@ -1,3 +1,7 @@
 <h1>Welcome!</h1>
 
-<p>Sign up <%= link_to "here", "#" %>.</p>
+
+<% if !user_signed_in? %>
+	<p>Sign up <%= link_to "here", new_user_registration_path %>.</p>
+<% end -%>
+
