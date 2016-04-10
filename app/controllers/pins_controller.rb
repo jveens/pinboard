@@ -3,6 +3,7 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   # Access the Pins in these actions ONLY IF current_user
   before_action :set_user, only: [:edit, :update, :destroy]
+  
   before_action :authenticate_user!, except: [:index, :show]
 
   # GET /pins
